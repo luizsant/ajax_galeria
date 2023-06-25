@@ -15,3 +15,49 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error:', error));
 });
+
+// Lista dos seus projetos no Vercel
+const projects = [
+    "https://ebac-tech-talks-lime.vercel.app/",
+    "https://projeto-assassins-creed.vercel.app/",
+    "https://luizclone-disneyplus.vercel.app/",
+    "https://linktree-nine-gold.vercel.app/",
+    "https://lawesc.vercel.app/",
+    "https://restobootstp.vercel.app/",
+    "https://bootstrp.vercel.app/",
+    "https://responsive-gamma.vercel.app/",
+    "https://pizza-store-one.vercel.app/",
+    "https://site-veiculos-jquery.vercel.app/",
+    "https://lista-supermercado-two.vercel.app/",
+    "https://luizrpg-mini-project.vercel.app/",
+    "https://luizgaleria-de-fotos.vercel.app/",
+    "https://luizagenda-telefone.vercel.app/",
+    "https://luizcalculadora-de-medias.vercel.app/",
+    "https://site-games-shop-tan.vercel.app/"
+];
+
+function createProjectGallery() {
+    const gallery = document.querySelector('.project-gallery');
+
+    projects.forEach(projectUrl => {
+        const projectContainer = document.createElement('div');
+        projectContainer.className = "project-container";
+
+        const link = document.createElement('a');
+        link.href = projectUrl;
+        link.target = "_blank";
+
+        const image = document.createElement('img');
+        image.src = `http://mini.s-shot.ru/1024x768/JPEG/1024/Z100/?${projectUrl}`;
+        image.alt = "Projeto";
+        image.className = "project-window";
+
+        link.appendChild(image);
+        projectContainer.appendChild(link);
+        gallery.appendChild(projectContainer);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    createProjectGallery();
+});

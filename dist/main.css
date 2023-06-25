@@ -1,6 +1,8 @@
 :root {
   --header-color: #01a3a4;
   --bg-color: #eee;
+  --gradient-start: #ee8c3c;
+  --gradient-end: #44280d;
 }
 
 * {
@@ -12,7 +14,7 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
 }
 
 .container {
@@ -28,6 +30,7 @@ header {
   background-color: var(--header-color);
   text-align: center;
   height: 30vh;
+  box-shadow: 0 2px 4px #0003;
 }
 
 header .container {
@@ -40,24 +43,43 @@ header .container {
   width: 180px;
   height: 180px;
   margin-bottom: 24px;
+  box-shadow: 0 2px 4px #0003;
 }
 
 .profile-name {
   font-size: 2em;
-}
-
-.profile-username {
-  margin: 16px 0 32px;
-  font-size: 1.1em;
+  box-shadow: 0 2px 4px #0003;
 }
 
 .profile-link {
-  background-color: var(--header-color);
   color: var(--bg-color);
+  background-color: #01a3a4cc;
   margin-top: 24px;
   padding: 8px 16px;
   text-decoration: none;
+  transition: box-shadow .3s ease-in-out;
   display: inline-block;
+  box-shadow: 0 2px 4px #0003;
+}
+
+.profile-username {
+  color: var(--bg-color);
+  background-color: #0401a4cc;
+  margin: 16px 0 32px;
+  padding: 8px 16px;
+  font-size: 1.1em;
+  transition: box-shadow .3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 2px 4px #0003;
+}
+
+.profile-link:hover {
+  box-shadow: 0 4px 8px #0003;
+}
+
+.profile-link:focus {
+  box-shadow: 0 4px 8px #0003, 0 0 0 2px var(--header-color);
+  outline: none;
 }
 
 .numbers {
@@ -72,6 +94,66 @@ header .container {
 
 .numbers-item h4 {
   font-size: .3em;
+}
+
+.project-gallery {
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 22px;
+  margin-top: 350px;
+  padding: 0 22px;
+  display: grid;
+}
+
+.project-container {
+  border-radius: 5px;
+  width: 100%;
+  transition: transform .3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px #0003;
+}
+
+.project-container:hover {
+  z-index: 2;
+  transform: scale(1.05);
+}
+
+.project-window {
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-container .project-window:before {
+  content: "";
+  background-color: var(--bg-color);
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project-container:hover .project-window:before {
+  opacity: .5;
+}
+
+@media (width <= 768px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 480px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

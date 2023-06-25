@@ -33,7 +33,8 @@ const projects = [
     "https://luizgaleria-de-fotos.vercel.app/",
     "https://luizagenda-telefone.vercel.app/",
     "https://luizcalculadora-de-medias.vercel.app/",
-    "https://site-games-shop-tan.vercel.app/"
+    "https://site-games-shop-tan.vercel.app/",
+    
 ];
 
 function createProjectGallery() {

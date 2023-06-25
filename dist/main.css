@@ -101,7 +101,7 @@ header .container {
   justify-content: center;
   gap: 22px;
   margin-top: 350px;
-  padding: 0 22px;
+  padding: 0 22px 24px;
   display: grid;
 }
 
@@ -146,13 +146,14 @@ header .container {
 @media (width <= 768px) {
   .project-gallery {
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 20px;
   }
 }
 
 @media (width <= 480px) {
   .project-gallery {
     grid-template-columns: 1fr;
-    padding: 0 10px;
+    padding: 0 10px 20px;
   }
 }
 

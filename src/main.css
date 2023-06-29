@@ -2,7 +2,7 @@
     --header-color: #01a3a4;
     --bg-color: #eee;
     --gradient-start: #ee8c3c;
-    --gradient-end: #44280d;
+    --gradient-end: #330d44;
   }
   
   * {
@@ -60,6 +60,7 @@
     text-decoration: none;
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
   }
   
   .profile-username {
@@ -76,6 +77,8 @@
   
   .profile-link:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(2, 182, 182, 0.795);
+  
   }
   
   .profile-link:focus {

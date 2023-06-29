@@ -2,7 +2,7 @@
   --header-color: #01a3a4;
   --bg-color: #eee;
   --gradient-start: #ee8c3c;
-  --gradient-end: #44280d;
+  --gradient-end: #330d44;
 }
 
 * {
@@ -56,6 +56,7 @@ header .container {
   background-color: #01a3a4cc;
   margin-top: 24px;
   padding: 8px 16px;
+  font-weight: bold;
   text-decoration: none;
   transition: box-shadow .3s ease-in-out;
   display: inline-block;
@@ -74,6 +75,7 @@ header .container {
 }
 
 .profile-link:hover {
+  background-color: #02b6b6cb;
   box-shadow: 0 4px 8px #0003;
 }
 

@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Lista dos seus projetos no Vercel
 const projects = [
     "https://ebac-tech-talks-lime.vercel.app/",
+    "https://todo-react-js-lsant.vercel.app/",
+    "https://react-imc-lsant.vercel.app/",
     "https://todo-vue-five-phi.vercel.app/",
     "https://projeto-assassins-creed.vercel.app/",
     "https://luizclone-disneyplus.vercel.app/",
